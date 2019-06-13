@@ -10,7 +10,49 @@
             </div>
             <div id="post">
                 <h1>Este es el título atractivo e interesante del post</h1>
-                <p>Y este es el parrafo de inicio donde vamos a explicar las cosas increéibles que se pueden hacer con ramas</p>
+                <p>Resumen de lo visto hasta esta clase:
+
+                    Git es un sistema de control de versiones, el cual facilita tener controladas las versiones de tus proyectos al solo guardar los cambios realizados. Estos son los principales comandos vistos hasta ahora:
+                    
+                    git init: al ejecutar este comando dentro de la carpeta principal de mi proyecto le estoy indicando a git que esta será la carpeta con la que trabajaré, y permitiré que git lea y controle los cambios hechos a los archivos y carpetas contenidos en esta carpeta.
+                    
+                    git add <nombre_de_archivo>: añade el archivo especificado a la etapa de staging, que es como una especie de memoria temporal donde se almacenan los cambios realizados en mi proyecto hasta ese momento. Se elimina de staging al terminar mi sesión de git o al realizar commit.
+                    
+                    git add . : Añade al staging todos los archivos que han tenido modificaciones.
+                    
+                    git config --global user.name “Fulanito de tal”: En git es necesario identificar que usuario hace los commit, por lo tanto antes de realizar nuestro primer commit es necesario identificarnos. Con este comando le señalamos a git quien está realizando los commit al proyecto.
+                    
+                    git config --global user.email fulanito@correo.co: Con este comando le señalamos a git el correo del usuario que realiza los commit.
+                    
+                    git commit: Guarda de manera definitiva en git los cambios realizados a los archivos que estaban en etapa de staging. Admite las siguiente instrucciones:
+                    git commit -m “Comentario”: añade un comentario a nuestro commit (obligatorio, puesto que requerimos saber que cambios hicimos a nuestro proyecto en este commit)
+                    git commit -a: Si no se han añadido los cambios a staging con git add, este comando fusiona git add y git commit.
+                    
+                    git log: Muestra un historial de los commit que hemos realizado en la rama donde estamos ubicados actualmente.
+                    
+                    git reset <identificador del commit>: Destruye todos los cambios que se han realizado a partir del commit que especifiquemos, volviendo al estado en el que estabamos dentro de nuestro proyecto en ese commit. Hay dos maneras de realizarlo:
+                    git reset <commit> --soft: Volvemos a la versión especificada, pero los cambios en staging aun quedan en ese estado, listos para realizar un git add
+                    git reser <commit> --hard: Volvemos a la versión especificada y eliminamos del staging los cambios que esten en ese estado.
+                    
+                    git diff: Muestra los cambios que se han realizado al archivo entre el ultimo git add (los que están en staging) y el archivo que tengo en disco pero que aun no está en staging.
+                    
+                    git checkout <identificador_del_commit> <nombre_del_archivo>: nos permite revisar el archivo especificado en el commit señalado. No destruye commit posteriores.
+                    
+                    git clone url.delservi.dor/remoto: nos permite clonar un repositorio alojado en un servidor externo.
+                    
+                    git push: Con este comando enviamos los cambios commiteados al servidor remoto.
+                    
+                    git fetch: Nos actualiza el repositorio que hemos clonado con los cambios más recientes realizados en el servidor.
+                    
+                    git merge: Nos permite fusionar nuestros cambios con los cambios traidos con git fetch.
+                    
+                    git pull: realiza git fetch + git merge en un solo comando.
+                    
+                    git branch <nombre_de_la_rama>: nos permite crear una nueva rama, donde puedo realizar cambios a nuestro trabajo que no se verán reflejados en la rama principal.
+                    
+                    git checkout <nombre_de_la_rama>: con este comando pasamos de la rama en la que estabamos a la rama especificada en el comando.
+                    
+                    git merge <nombre_de_la_rama>: Este comando fusiona los cambios de la rama en la que estoy con la rama que especifique en el comando y realiza un commit con todos los cambios.</p>
             </div>
         </div>
     </body>
